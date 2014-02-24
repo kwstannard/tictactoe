@@ -1,0 +1,126 @@
+body {
+  width: 29em;
+  height: 29em;
+}
+
+.board {
+  width: 29em;
+  height: 29em;
+  background-color: black;
+}
+
+.spot {
+  width: 9em;
+  height: 9em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  float: left;
+  background-color: white;
+}
+
+[id^="2"] {
+  margin-bottom: 0em;
+}
+
+[id$="2"] {
+  margin-right: 0em;
+}
+
+.red {
+  width: 9em;
+  height: 9em;
+  display: none;
+}
+
+.circle {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  border-width: 1em;
+  border-color: salmon;
+  border-style: solid;
+}
+
+.blue {
+  width: 9em;
+  height: 9em;
+  display: none;
+}
+
+.cross {
+	width: 10em;
+	height: 1em;
+  position: relative;
+  top: 4em;
+  right: 0.5em;
+  background-color: deepskyblue;
+   -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+       -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+}
+
+.cross.switch {
+  top: 0;
+  right: 0;
+  background-color: deepskyblue;
+   -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+       -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+}
+
+.title {
+  font-size: xx-large;
+  font-family: sans-serif;
+  font-variant: small-caps;
+  margin-bottom: 1em;
+  text-align: center;
+  background: deepskyblue;
+}
+
+.blue-turn {
+  background: deepskyblue;
+}
+
+.red-turn {
+  background: salmon;
+}
+
+.new-game {
+  font-size: xx-large;
+  font-family: sans-serif;
+  border-style: solid;
+  border-radius: 0.4em;
+  color: black;
+  margin-top: 1em;
+  padding: 0.2em;
+  text-align: center;
+  background: cornsilk;
+}
+
+.winner-red {
+  -webkit-animation: redWon 2s linear 0.5s infinite alternate;
+}
+
+.winner-blue {
+  -webkit-animation: blueWon 2s linear 0.5s infinite alternate;
+}
+
+@-webkit-keyframes redWon {
+  from {
+    background: red;
+  };
+  to {
+    background: salmon;
+  };
+}
+
+@-webkit-keyframes blueWon {
+  from {
+    background: blue;
+  };
+  to {
+    background: deepskyblue;
+  };
+}

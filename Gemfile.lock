@@ -1,0 +1,74 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    backports (3.6.0)
+    coderay (1.1.0)
+    commander (4.1.6)
+      highline (~> 1.6.11)
+    diff-lcs (1.2.5)
+    ffi (1.9.3-java)
+    highline (1.6.20)
+    method_source (0.8.2)
+    multi_json (1.8.4)
+    obvious (0.0.10)
+    pry (0.9.12.4)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry (0.9.12.4-java)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+      spoon (~> 0.0)
+    purple_shoes (0.7.166)
+      swt
+    rack (1.5.2)
+    rack-protection (1.5.2)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rspec (2.14.1)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
+    rspec-core (2.14.7)
+    rspec-expectations (2.14.4)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.14.4)
+    sinatra (1.4.4)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    sinatra-contrib (1.4.2)
+      backports (>= 2.0)
+      multi_json
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.0)
+      tilt (~> 1.3)
+    sinatra-logger (0.1.1)
+      sinatra (>= 1.0)
+    slim (2.0.2)
+      temple (~> 0.6.6)
+      tilt (>= 1.3.3, < 2.1)
+    slop (3.4.7)
+    spoon (0.0.4)
+      ffi
+    swt (0.18)
+    temple (0.6.7)
+    tilt (1.4.1)
+
+PLATFORMS
+  java
+  ruby
+
+DEPENDENCIES
+  commander
+  obvious
+  pry
+  purple_shoes
+  rspec
+  sinatra
+  sinatra-contrib
+  sinatra-logger
+  slim

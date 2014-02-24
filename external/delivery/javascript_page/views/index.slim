@@ -1,0 +1,13 @@
+div.title.red-turn TicTacToe
+
+div.board
+  - (0..2).each do |r|
+    - (0..2).each do |c|
+      div.spot id="s#{r}-#{c}"
+        div.red
+          div.circle
+        div.blue
+          div.cross
+            div.cross.switch
+
+div.new-game hint="click for new game" New Game
