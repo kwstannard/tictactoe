@@ -1,7 +1,11 @@
 class TTTApp
-  def set_up(environment)
+  def initialize(environment = :development)
     set_up_actions
     set_up_repositories(environment)
+  end
+
+  def route(action, *args)
+    @actions.fetch(action.to_s).new(*args).execute
   end
 
   private
@@ -16,7 +20,6 @@ class TTTApp
   def set_up_actions
     @actions = {}
     Dir["#{File.dirname(__FILE__)}/app/actions/*.rb"].each do |file|
-      puts file
       require file
       file_name = file.match(/(\w+)(?=\.rb)/)[0]
       klass = Module.const_get(file_name.split('_').map(&:capitalize).join)
@@ -24,7 +27,4 @@ class TTTApp
     end
   end
 
-  def method_missing(method, *args, &block)
-    @actions.fetch(method.to_s).new(*args).execute
-  end
 end

@@ -1,18 +1,17 @@
 require '../../../TTTapp/app'
-require './lib/board_builder'
+require './lib/board_presenter'
 
-@app = TTTApp.new
-@app.set_up(ENV['RACK_ENV'])
-@board = @app.new_game
+@app = TTTApp.new(ENV['RACK_ENV'])
+@board = @app.route "new_game"
 
-puts BoardBuilder.build @board
+puts BoardPresenter.build @board
 
 def new_game
-  @board = @app.new_game
-  puts BoardBuilder.build @board
+  @board = @app.route "new_game"
+  puts BoardPresenter.build @board
 end
 
 def make_play(play)
-  @board = @app.make_play(play, @board)
-  puts BoardBuilder.build @board
+  @board = @app.route("make_play", play, @board)
+  puts BoardPresenter.build @board
 end

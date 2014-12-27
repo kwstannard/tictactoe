@@ -1,9 +1,9 @@
 require '../../../TTTapp/app'
-require 'board_builder'
+require 'board_presenter'
 
-describe BoardBuilder do
+describe BoardPresenter do
   describe '.build' do
-    let(:builder) { BoardBuilder.build(board) }
+    let(:builder) { described_class.build(board) }
     let(:board) { {turn: player, plays: plays, winner: nil} }
     let(:player) { :red }
     let(:plays) { {red: [], blue: []} }

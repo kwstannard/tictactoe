@@ -1,7 +1,7 @@
 require_relative '../../app/actions/make_play'
 
 describe MakePlay do
-  let(:result) { MakePlay.new(play, board).execute }
+  let(:result) { described_class.new(play, board).execute }
   let(:board) { {turn: player, plays: plays, winner: nil} }
   let(:player) { :red }
   let(:plays) { {red: [], blue: []} }

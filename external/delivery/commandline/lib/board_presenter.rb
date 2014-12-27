@@ -1,4 +1,4 @@
-class BoardBuilder
+class BoardPresenter
   def self.build(board)
     display = title(board)
     disp_board = empty_board
